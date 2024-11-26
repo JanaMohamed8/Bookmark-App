@@ -1,0 +1,31 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 768px){
+    h2{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    #updateBtnMain{
+        width: 100px;
+    }
+    .dataTable{
+        font-size: 16px;
+    }
+    .table>:not(caption)>*>*{
+        font-size: 14px;
+    }
+    .btn{
+        --bs-btn-font-size: 12px;
+    }
+    .title {
+        padding: 30px 0 40px 0;
+      }
+
+}

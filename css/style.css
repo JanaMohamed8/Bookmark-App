@@ -1,0 +1,176 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+  --transition-DU: 0.35s;
+  --main-text-color: rgb(33, 37, 41);
+  --main-color: #fec260;
+  --header-text-color: rgb(53, 46, 40);
+  --transition-btn: 0.15s;
+}
+
+::-moz-selection {
+  background-color: var(--main-color);
+}
+
+::selection {
+  background-color: var(--main-color);
+}
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  color: var(--main-text-color);
+}
+main {
+    background-color: #f7ecde;
+    min-height: 100vh;
+  }
+/* title */
+h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--header-text-color);
+  z-index: 5;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  background-color: var(--main-color);
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition: height var(--transition-DU);
+  -o-transition: height var(--transition-DU);
+  transition: height var(--transition-DU);
+}
+h1:hover::after {
+  height: 65%;
+}
+.title {
+    padding: 50px 0 60px 0;
+  }
+/* title */
+
+/* main content */
+h2 {
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3ca55c), to(#b5ac49));
+  background-image: -o-linear-gradient(left, #3ca55c, #b5ac49);
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-block: 30px;
+  font-size: 25px;
+  font-family: "Righteous", sans-serif;
+  font-weight: 500;
+}
+
+.mainContant {
+  border-block: dotted var(--header-text-color) 2px;
+}
+
+.form-label {
+  font-weight: 600;
+}
+#visitBtn,
+#addBtn,
+#DeleteBtn {
+  color: white;
+  -webkit-transition: background-color var(--transition-btn);
+  -o-transition: background-color var(--transition-btn);
+  transition: background-color var(--transition-btn);
+}
+#addBtn {
+  background-color: #d1512d;
+  padding-inline: 50px;
+}
+#addBtn:hover {
+  background-color: #bb4120;
+}
+#updateBtnMain{
+  color: white;
+  width: 160px;
+}
+.form-control:focus {
+  border-color: var(--main-color);
+  -webkit-box-shadow: 0 0 0 0.25rem #fec26055;
+          box-shadow: 0 0 0 0.25rem #fec26055;
+}
+/* main content */
+
+/* data */
+#visitBtn {
+  background-color: #9eb23b;
+}
+#visitBtn:hover {
+  background-color: #8a9e23;
+}
+#DeleteBtn {
+  background-color: #eb1d36;
+}
+#DeleteBtn:hover {
+  background-color: #d30820;
+}
+
+/* data */
+
+/* alert */
+#errorAlert{
+  position:fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+}
+#inner-alert{
+  background-color: white;
+  width: 500px;
+  height: 260px;
+  padding: 30px;
+  border-radius: 6px;
+}
+.title-alert{
+  font-family: "Bree Serif", serif;
+  font-size:21px ;
+  font-weight: 400;
+}
+.descreptionError{
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 400;
+  font-size:18px ;
+}
+
+.fa-circle-right{
+  color:rgb(187, 65, 32);
+}
+.fa-circle{
+  font-size: 16px;
+}
+.btn-close{
+  --bs-btn-close-opacity: 1;
+}
+.btn-close:focus {
+  --bs-btn-close-focus-shadow:0;
+}

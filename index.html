@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta disc -->
+    <meta name="description" content="bookmark your favorite sites ">
+    <meta name="keywords" content="bookmark">
+    <!-- tab -->
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="imges/bookmark.ico" type="image/x-icon">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- style links -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+
+    <main>
+        <div class="container py-4">
+
+
+            <div id="errorAlert" class="d-none">
+                <div id="inner-alert">
+                    <div class="iconsError d-flex justify-content-between mb-4">
+                        <div class="circleError">
+                            <i class="fa-solid fa-circle text-danger"></i>
+                            <i class="fa-solid fa-circle text-warning"></i>
+                            <i class="fa-solid fa-circle text-success"></i>
+                        </div>
+                        <button type="button" class="btn-close" onclick="closeAlert()"></button>
+                    </div>
+                    <p class="title-alert">Site Name or Url is not valid, Please follow the rules below :</p>
+                    <p class="descreptionError"><i class="fa-regular fa-circle-right"></i> Site name must contain at
+                        least 3
+                        characters</p>
+                    <p class="descreptionError"><i class="fa-regular fa-circle-right"></i> Site URL must be a valid one
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="title">
+                <h1>Bookmarker</h1>
+            </div>
+
+            <div class="mainContant d-flex justify-content-center flex-wrap px-3">
+                <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i> </h2>
+
+                <div class="w-100">
+                    <label for="validationServer01" class="form-label"><i class="fa-solid fa-book-bookmark"></i> Site
+                        Name</label>
+                    <input type="text" class="form-control" id="siteNameINput" required placeholder="Bookmark Name"
+                        oninput="validation('siteNameINput')" name="BookmarkName">
+                </div>
+
+                <div class="mt-3 w-100">
+                    <label for="validationServer03" class="form-label"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input type="text" class="form-control" id="siteSiteINput" required placeholder="Website URL"
+                        oninput="validation('siteSiteINput')" name="WebsiteURL">
+                </div>
+
+                <button type="button" class="btn my-4" id="addBtn" onclick="addRow()">Submit</button>
+                <button type="button" class="btn my-4 btn-warning d-none" id="updateBtnMain" onclick="update()">Update</button>
+            </div>
+
+
+            <input type="search" class="form-control mt-4" id="siteSearch" required placeholder="Search Site Name" oninput="search()">
+
+            <div class="dataTable mt-2">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Update</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="dataTableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
